@@ -15,12 +15,12 @@ const cart = [
   { name: "dress", type: "regular", category: "clothes", price: 49.9 },
 ];
 
-function isPrime(item) {
+function higherOrderFx(item) {
   return item.type === "prime";
 }
 
 function primeItems(cart) {
-  return cart.filter(isPrime);
+  return cart.filter(higherOrderFx);
 }
 
 console.log(primeItems(cart));
@@ -41,7 +41,7 @@ function reject(arr, callback) {
   return arr.filter((item) => !correctArr.includes(item));
 }
 
-console.log(_.reject(cart, isPrime));
+console.log(_.reject(cart, higherOrderFx));
 
 /**
  * Map
